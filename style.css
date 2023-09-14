@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.25rem;
+    color: #333;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30rem 30rem;
+    grid-template-areas: 
+    "sd1 main"
+    ;
+    width: 62rem; /*992px*/
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    border: 4px solid #cd5c5c;
+    background-color: rgba(205,92,92,0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.75);
+}
+
+#sd1 {
+    display: grid;
+    grid-area: sd1;
+    height:100vh;
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    background-color: rgba(205,92,92,0.1);
+}
+
+#sd1 img {
+    object-fit: fill;
+    background-color: rgba(205,92,92,0.1);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+
+
+/* header {
+    display: grid;
+    grid-area: hd;
+    grid-template-areas: 
+    "hd1 hd2";
+    height: 10rem;
+    line-height: 4rem;
+    padding: 1rem;
+    background-color: #cd5c5c;
+    background: url("/images/bg-main.jpg") no-repeat bottom center/cover;
+    top: 0;
+    position: sticky;
+    width: 100%;
+} */
+
+h1 {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: #cd5c5c;
+    font-weight: 900;
+    letter-spacing: 0.25rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h4 {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #cd5c5c;
+    font-weight: bolder;
+    margin: 0;
+}
+
+h6 {
+    display: inline-block;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+/* #summary {
+    display: grid;
+    background-color: transparent;
+    color: #cd5c5c;
+    font-weight: bold;
+} */
+
+/* #tot_Cost, #addToCart {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: 12rem;
+    margin: 2px;
+    padding: 4px;
+    text-align: center;
+    color: #fff;
+    background: url("/images/pizza-bg.gif") no-repeat top center/cover;
+} */
+
+#tot_Cost {
+    font-size: 2.75rem;
+    height: 9.5rem;
+    width: 9.5rem;
+    border-radius: 50%;
+    line-height: 4rem;
+    color: #fff;
+    font-weight: bolder;
+    border: 2px double #fff;
+    background-color: #cd5c5c;
+    /* background: url("/images/pizza-bg.gif") no-repeat top center/cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "dgsp";
+}
+
+/* #addToCart {
+    height: 3rem;
+    line-height: 3rem;
+} */
+
+#pizza-form {
+    top: 0;
+    display: grid;
+    grid-area: main;
+    background-color: rgba(205,92,92,0.1);
+    border-left: 1px solid #cd5c5c;
+    margin: 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#pizza-form p {
+    text-align: justify;
+    padding-right: 2rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+input[type=text], input[type=tel], select {
+    border: 1px solid #cd5c5c;
+    border-radius: 0.25rem;
+    height: 1.75rem;
+    padding: 0.25rem 0.5rem;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: inherit;
+    font-size: 1rem;
+}
+
+#customer_name::first-letter, customer-address::first-letter {
+    text-transform: uppercase;
+}
+
+input[type=text]:focus, input[type=tel]:focus, select:focus {
+    border: 2px solid #cd5c5c;
+    background-color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: inherit;
+    font-size: 1rem;
+}
+
+input[type="tel"] {
+    width: 100%;
+}
+
+.form-group-customer {
+    display: inline-block;
+    margin: 0;
+}
+
+.form-group-customer span {
+    width: 42%;
+    display: inline-block;
+    height: 3rem;
+    margin-right: 2rem;
+}
+
+.form-group-customer label, .form-group-customer input[type="text"], .form-group-customer input[type="tel"] {
+    display: block;
+}
+
+
+.form-group-size {
+    display: inline-block;
+}
+
+#size-2, #size-4, #size-6, #size-8 {
+    display: none;
+}
+
+input[type="radio"]:checked ~ label {
+    background-color: #cd5c5c;
+    color: #fff;
+    width: 100%;
+    font-weight: bolder;
+}
+
+.form-group-size ul {
+    display: flex;
+    justify-content: center;
+    width: 92%;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    border: none;
+}
+
+.form-group-size li {
+    display: inline-block;
+    color: #cd5c5c;
+    width: 25%;
+    font-weight: bolder;
+    border: 2px solid #cd5c5c;
+    font-size: 1rem;
+    height: 3rem;
+    align-items: center;
+}
+
+.form-group-size li:first-child {
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+
+.form-group-size li:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.form-group-size label, .form-group-size input[type="radio"] {
+    display: inline-block;
+}
+
+.form-group-size label {
+    width: 100%;
+    cursor: pointer;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group-toppings {
+    display: grid;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 11rem;
+}
+
+.checkbox-group input[type="checkbox"]::before {
+    border: 2px solid #cd5c5c;
+}
+
+.checkbox-group input[type="checkbox"] {
+    transform: scale(2);
+    accent-color: #cd5c5c;
+}
+
+
+.checkbox-group span {
+    display: inline;
+    margin-bottom: 0.5rem;
+    padding: 0 8px;
+    width:100%;
+}
+
+.checkbox-group span label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    margin: 0;
+    margin-left: 0.5rem;
+}
+
+.form-group-delivery select::before {
+    background-color: rgba(205,92,92,0.1);
+}
+
+.form-group-delivery select {
+    height: 2rem;
+    box-sizing: border-box;
+}
+
+.form-group-delivery select:focus {
+    border-color: #cd5c5c;
+    box-sizing: border-box;
+}
+
+#address {
+    display: none;
+    margin-bottom: 1rem;
+}
+
+#result {
+    display: none;
+}
+
+input[type=text], input[type=tel], select {
+    background-color: rgba(205,92,92,0.1);
+    color: #333;
+}
+  
+
+/* #addToCart{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    border: none;
+} */
+
+#addToCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cd5c5c;
+    width: 95%;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    background-color: rgba(205,92,92,0.1);
+    border: 2px solid #cd5c5c;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    height: 3rem;
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#addToCart:hover {
+    background-color: #cd5c5c;
+    color: #fff;
+}
+
+#to_Cart {
+    display: none;
+}

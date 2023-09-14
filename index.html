@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_m.css">
+    <title>Homemade Pizza!</title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="sd1">
+            <span id="tot_Cost">
+                €0.00
+            </span>
+            <img src="./images/pizza-bg.gif" alt="Chicken Pizza"/>
+        </div>
+
+<!--         <header>
+            
+        </header> -->
+
+        
+        <form id="pizza-form" class="container-child">
+            <h1>Chicken Pizza</h1>
+            <p>The seduction of grilled chicken, pineapple and Aura blue cheese makes pizza love go wild. Take your conquests to the shopping cart and clear your calendar for a hot encounter. </p>
+<!--             <div id="summary">
+                
+            </div> -->
+            <h4>Customer Details:</h4>
+            <div class="form-group-customer">
+                <span>
+                    <label for="customer_name">Customer Name</label>
+                    <input type="text" id="customer_name" placeholder="Your name here" required>
+                </span>
+
+                <span>
+                    <label for="customer_phone">Phone Number</label>
+                    <input type="tel" id="customer_phone" placeholder="Contact number here" required>
+                </span>
+            </div>
+            
+            <h4>Pizza Size:</h4>
+            <div class="form-group-size">
+                <div class="radio-group">
+                    <ul>
+                        <li>
+                            <input checked type="radio" name="pizza-size" id="size-2" value="2" data-price="7.50" required>
+                            <label for="size-2">S - €9.90</label>
+                        </li>
+                        
+                        <li>
+                            <input type="radio" name="pizza-size" id="size-4" value="4" data-price="10.50">
+                            <label for="size-4">M - €12.90</label>
+                        </li>
+                        
+                        <li>
+                            <input type="radio" name="pizza-size" id="size-6" value="6" data-price="12.50">
+                            <label for="size-6">L - €14.90</label>
+                        </li>
+                        
+                        <li>
+                            <input type="radio" name="pizza-size" id="size-8" value="8" data-price="15.50">
+                            <label for="size-8">XL - €19.90</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4>Toppings:</h4>
+            <h6>[Note! First 4 are free! Extra topping(s) €0.50 each]</h6>
+            <div class="form-group-toppings">
+                <div class="checkbox-group">
+                    <!-- The first four toppings are free -->
+                    <span>
+                        <input type="checkbox" name="topping" id="topping-1" value="Topping 1">
+                        <label for="topping-1">Aura blue cheese</label>
+                    </span>
+                    
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-2" value="Topping 2">
+                        <label for="topping-2">Pineapple</label>
+                    </span>
+                    
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-3" value="Topping 3">
+                        <label for="topping-3">Grilled Chicken</label>
+                    </span>
+
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-4" value="Topping 4">
+                        <label for="topping-4">Avocado</label>
+                    </span>
+
+                    
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-5" value="Topping 5">
+                        <label for="topping-5">Jalapeno</label>
+                    </span>
+
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-6" value="Topping 6"> <!-- data-price="0.50" -->
+                        <label for="topping-6">Olive</label>
+                    </span>
+
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-7" value="Topping 7"> <!-- data-price="0.50" -->
+                        <label for="topping-7">Red onion</label>
+                    </span>
+
+                    <span>
+                        
+                        <input type="checkbox" name="topping" id="topping-8" value="Topping 8"> <!-- data-price="0.50" -->
+                        <label for="topping-8">Tuna</label>
+                    </span>
+
+                    <!-- Add more toppings as needed -->
+                </div>
+            </div>
+            
+            <h4>Delivery Option:</h4>
+            <div class="form-group-delivery">
+                <!-- <label for="delivery-option">Delivery Option:</label> -->
+                <select id="delivery-option" name="delivery-option" required>
+                    <option value="pick-up">Pick-up</option>
+                    <option value="home-delivery" data-fee="5.00">Home Delivery (+€5.00)</option>
+                    <option value="dine-in">Dine-in</option>
+                </select>
+            </div>
+            <div class="form-group" id="address">
+                <label for="customer-address">Address:</label>
+                <input type="text" name="customer-address" placeholder="Enter delivery address" id="customer-address" required>
+            </div>
+            
+            
+            
+            <button id="addToCart" type="submit">Add <!-- <span id="to_Cart">&nbsp;€0.00&nbsp;</span> --> to Cart</button>
+            
+            <!-- <li id="addToCart">Add to Cart</li> -->
+            
+        </form>
+
+        <div id="result" class="container-child">
+            <h2>Order summary:</h2>
+            <div class="wrap_summary">
+                <p>Customer name: <span id="c_Name"></span></p>
+                <p>Customer name: <span id="c_Phn"></span></p>
+                <p>Pizza size: <span id="p_Size"></span></p>
+                <p>Toppings:</p>
+                <ul id="p_Tops"></ul>
+                <p>Toppings: <span id="userToppings"></span></p>
+                <p>Delivery Option: <span id="del_Info"></span></p>
+                <p id="u_Address">
+                  Delivery address:
+                  <span id="del_Address"></span>
+                </p>
+            </div>
+            <hr>
+            <h4>Total Cost: <span id="tot_Cost">€0.00</span></h4>
+            
+            <button type="submit">Place Order</button>
+        </div>
+        
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
