@@ -10,10 +10,10 @@ Customer Name: A field for entering the customer's name.
 
 Pizza Size: Radio buttons for selecting the size of the pizza (2, 4, 6, or 8 servings) with corresponding prices.
 
-- For 2, the price is 7,50€
-- For 4, the price is 10,50€
-- For 6, the price is 12,50€
-- For 8, the price is 15,50€
+- For 2, the price is 9,90€
+- For 4, the price is 12,90€
+- For 6, the price is 14,90€
+- For 8, the price is 19,90€
 
 Toppings: Checkboxes for choosing from at least ten different pizza toppings, where the first four are free, and additional toppings incur a €0.50 charge each.
 
